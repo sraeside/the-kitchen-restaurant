@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="the kitchen resturaunt menu and online ordering form">
+        <title>the kitchen resturaunt menu and online ordering</title>
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="stylesheet" href="styles/restaurant_main.css">
+    </head>
+    <body>
+        <header>
+            <a href="home.html"><img src="images/logo_the_kitchen.png" alt="the kitchen logo"></a>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="menu_online_order.html">Menu</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="menu_page">
+            <div id="menu_hero"></div>
+            <form id="order_form" action="" method="post">
+                <h2>menu</h2>
+                <section>
+                    <section class="menu_course">
+                        <h4>Antipasti</h4>
+                        <h5>Burrata</h5>
+                        <p>cherry tomatoes, mint-pesto, dill vinaigrette <em class="price">$14</em></p>
+                        <label for="qty_burrata">Quantity:</label>
+                        <input type="number" name="qty_burrata" id="qty_burrata" min="0" max="10" step="1" value="0">
+                        <h5>Prosciutto di Parma</h5>
+                        <p>parmesan, honeycomb, seasonal fruit, fried flatbread <em class="price">$18</em></p>
+                        <label for="qty_prosciutto">Quantity:</label>
+                        <input type="number" name="qty_prosciutto" id="qty_prosciutto" min="0" max="10" step="1" value="0">
+                    </section>
+                    
+                    <section class="menu_course">
+                        <h4>Pizza</h4>
+                        <h5>Margherita</h5>
+                        <p>san marzano tomato, mozzarella, basil <em class="price">$17</em></p>
+                        <label for="qty_marg">Quantity:</label>
+                        <input type="number" name="qty_marg" id="qty_marg" min="0" max="10" step="1" value="0">
+                        <h5>Calabrese</h5>
+                        <p>calabrese salami, calabrian chili, olive, mozzarella, honey <em class="price">$18</em></p>
+                        <label for="qty_calabrese">Quantity:</label>
+                        <input type="number" name="qty_calabrese" id="qty_calabrese" min="0" max="10" step="1" value="0">
+                    </section>
+
+                    <section class="menu_course">
+                        <h4>Pasta</h4>
+                        <h5>Rigatoni</h5>
+                        <p>CAB bolognese, tomato, parmesan, basil <em class="price">$28</em></p>
+                        <label for="qty_rigatoni">Quantity:</label>
+                        <input type="number" name="qty_rigatoni" id="qty_rigatoni" min="0" max="10" step="1" value="0">
+                        <h5>Ravioli</h5>
+                        <p>herb ricotta, house italian sausage, vodka sauce <em class="price">$28</em></p>
+                        <label for="qty_ravioli">Quantity:</label>
+                        <input type="number" name="qty_ravioli" id="qty_ravioli" min="0" max="10" step="1" value="0">
+                    </section>
+
+                    <section class="menu_course">
+                        <h4>Piatti</h4>
+                        <h5>Chicken 'Cacciatorre'</h5>
+                        <p>grilled half chicken, onion, trumpet mushrooms, fire roasted bell peppers, olives, tomato gravy <em class="price">$36</em></p>
+                        <label for="qty_chicken">Quantity:</label>
+                        <input type="number" name ="qty_chicken" id="qty_chicken" min="0" max="10" step="1" value="0">
+                        <h5>Trout 'a la Puntanesca'</h5>
+                        <p>confit cherry tomatoes, olives, capers, saffron potato puree <em class="price">$36</em></p>
+                        <label for="qty_trout">Quantity:</label>
+                        <input type="number" name="qty_trout" id="qty_trout" min="0" max="10" step="1" value="0">
+                    </section>
+
+                    <section class="menu_course">
+                        <h4>Dolce</h4>
+                        <h5>Pear Almond Crostata</h5>
+                        <p>sage syrup, vanilla gelato <em class="price">$16</em></p>
+                        <label for="qty_crostata">Quantity:</label>
+                        <input type="number" name="qty_crostata" id="qty_crostata" min="0" max="10" step="1" value="0">
+                        <h5>Chocolate Panna Cotta</h5>
+                        <p>espresso gelee, faretti whip, chocolate hazelnut biscotti <em class="price">$16</em></p>
+                        <label for="qty_panna_cotta">Quantity:</label>
+                        <input type="number" name="qty_panna_cotta" id="qty_panna_cotta" min="0" max="10" step="1" value="0">
+                    </section>
+                </section>
+                
+                <h2>order details</h2>
+                <fieldset>
+	        		<legend>Contact Details</legend>
+                    <label for="first_name">First Name</label>
+					<input type="text" name="first_name" id="first_name" required><br>
+					<label for="last_name">Last Name</label>
+                    <input type="text" name="last_name" id="last_name" required><br>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" required><br>
+                    <label for="phone">Phone</label>
+                    <input type="tel" name="phone" id="phone" pattern="\d{3}[\-]\d{3}[\-]\d{4}" title="Must be 999-999-999 format"><br>
+                </fieldset>
+                <fieldset>
+                    <legend>Payment Details</legend>
+                    <label for="card_type">Card Type</label>
+					<select name="card_type" id="card_type">
+						<option value="visa">Visa</option>
+						<option value="mastercard">Mastercard</option>
+						<option value="discover">Discover</option>
+					</select><br>
+					
+                    <label for="card_number">Card Number</label>
+					<input type="text" name="card_number" id="card_number" required pattern="/d{16}" placeholder="16 digits" title="Must be 16 digits"><br>
+
+					<label for="expiration_month">Expiration date</label>
+					<select name="expiration_month" id="expiration_month">
+						<option value="jan">January</option>
+						<option value="feb">February</option>
+						<option value="mar">March</option>
+						<option value="apr">April</option>
+						<option value="may">May</option>
+						<option value="jun">June</option>
+						<option value="jul">July</option>
+						<option value="aug">August</option>
+						<option value="sep">September</option>
+						<option value="oct">October</option>
+						<option value="nov">November</option>
+						<option value="dec">December</option>
+					</select>
+					<select name="expiration_year" id="expiration_year">
+						<option value="24">2024</option>
+						<option value="25">2025</option>
+						<option value="26">2026</option>
+						<option value="27">2027</option>
+						<option value="28">2028</option>
+                    </select>
+                </fieldset>
+				<button type="submit" value="submit">submit</button>
+            </form>
+        </main>
+        <footer>
+            <p>Served with love by <strong>the kitchen.</strong></p>
+        </footer>
+    </body>
+</html>

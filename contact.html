@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="the kitchen resturaunt menu contact us">
+        <title>the kitchen resturaunt contact us</title>
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="stylesheet" href="styles/restaurant_main.css">
+    </head>
+    <body>
+        <header>
+            <a href="home.html"><img src="images/logo_the_kitchen.png" alt="the kitchen logo"></a>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="menu_online_order.html">Menu</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="contact_page">
+            <section class="hours_location">
+                <h2>hours and location</h2>
+                <p>300 30th Street, New York, NY 10014</p>
+                <p>Sunday - Thursday 5 - 10pm</p>
+                <p>Friday and Saturday 5 - 11pm</p>
+            </section>
+            <section class="reservation">
+                <h2>reservations</h2>
+                <p>All reservations are handled through <a href="https://www.opentable.com/" target="_blank">OpenTable.</a></p>
+                <p>Alternatively, you may e-mail <a href="mailto:reservations@thekitchen.com">reservations@thekitchen.com</a> with your name, phone number, preferred date(s), time(s), and number of guests.</p>
+                <p>Should you wish to speak with a reservationist by phone, please call <a href="tel:888-444-6666">888-444-6666</a>.</p>
+                <p>We look forward to welcoming you in.</p>
+            </section>
+            <section class="contact">
+                <h2>contact</h2>
+                <p>Send us a message and we’ll get back to you as soon as possible. We're looking forward to hearing from you!</p>
+                <form id="contact_form" action="" method="post">
+                    <fieldset>
+                        <label for="name">Name</label><br>
+                        <input type="text" name="name" id="name" placeholder="Name" required><br>
+                        <label for="email">Email</label><br>
+                        <input type="email" name="email" id="email" placeholder="Email" required><br>
+                        <label for="phone">Phone</label><br>
+                        <input type="tel" name="phone" id="phone" placeholder="Phone Number" pattern="\d{3}[\-]\d{3}[\-]\d{4}" title="Must be 999-999-999 format"><br>
+                        <label for="inquiry">What are you getting in touch about?</label><br>
+                        <select name="inquiry" id="inquiry">
+                            <option value="inquiry">What are you getting in touch about?</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="media">Media Inquiry</option>
+                            <option value="press">Press Inquiry</option>
+                            <option value="team">Join Our Team</option>   
+                        </select><br>
+                        <label for="message">Your Message</label><br>
+                        <textarea name="message" id="message" placeholder="Your Message" required></textarea>
+                        <button type="submit" value="send">send</button>
+                    </fieldset>
+                </form>
+            </section>
+            <div id="pasta_love_image"></div>
+        </main>
+        <footer>
+            <p>Served with love by <strong>the kitchen.</strong></p>
+        </footer>
+    </body>
+</html>

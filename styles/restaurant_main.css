@@ -1,0 +1,382 @@
+/* the styles for the elements */
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+body {
+	font-family:'Arial Narrow', Arial, sans-serif;
+    color: #2A2727;
+    background-color: #f8f4ed;
+    line-height: 1.4;
+}
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color:#a27e51;
+}
+h2, h3 {
+    font-variant: small-caps;
+    font-size: 1.75rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    color:#a27e51;
+}
+h4 {
+    font-style: italic;
+    color:#a27e51;
+    font-size: 1.75rem;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+}
+h5 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+p, a, strong, em {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.1rem;
+}
+a {
+    text-decoration: none;
+    color:#2A2727;
+}
+a:hover, a:focus {color:#a27e51;}
+button {
+    border: 1px solid #10312B;
+    background-color: #10312B;
+    padding: 1rem;
+    color: #f8f4ed;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+button:hover {background-color: #a27e51; }
+
+/* the styles for the header navigation */
+header {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+header img {
+    flex-basis: 250px;
+}
+header nav {
+    flex-basis: 60%;
+}
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    text-transform: uppercase;
+}
+nav ul li {
+    flex-basis: 20%;
+    text-align: center;
+}
+nav ul li a {
+    text-decoration: none;
+    text-align: center;
+    color: #a27e51;
+}
+nav a:hover {
+    color:#10312B;
+}
+
+/* the styles for the home page */
+.home_page {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.welcome {grid-row: 1 / 2; grid-column: 1 / span 12;}
+.about {grid-row: 2 / 3; grid-column: 1 / span 6;}
+.about_image {grid-row: 2 / 3; grid-column: 7 / span 6;}
+.menu_image {grid-row: 3 / 4; grid-column: 1 / span 6;}
+.menu_cta {grid-row: 3 / 4; grid-column: 7 / span 6;}
+.contact_cta {grid-row: 4 / 5; grid-column: 1 / span 6;}
+.contact_image {grid-row: 4 / 5; grid-column: 7 / span 6;}
+
+.home_page video, .home_page img {
+    width: 100%;
+}
+
+.home_page h1 {
+    font-weight: lighter;
+    font-variant: small-caps;
+    line-height: 1.1;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.home_page h3, .home_page p {
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.home_page p:last-of-type {
+    margin-bottom: 3rem;
+}
+.home_page a {
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    color: #10312B;
+    border: 2px solid #10312B;
+    border-radius: 5px;
+    padding: .75rem 1rem;
+   
+}
+.home_page a:hover, .home_page a:focus {
+    background-color: #10312B;
+    color: #f8f4ed;
+}
+.about, .menu_cta, .contact_cta {
+    padding: 3rem;
+}
+input::placeholder, select::placeholder, textarea::placeholder {
+    font-family:'Arial Narrow', Arial, sans-serif
+}
+
+/* the styles for the menu page */
+.menu_page h2 {
+    text-align: center;
+    font-size: 2rem;
+}
+#menu_hero {
+    background-image: url("../images/raviloi.jpeg");
+    background-color: #f8f4ed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 70vh;
+}
+#order_form {
+    text-align: left;
+    line-height: 1.5;
+    padding: 1rem 3rem 3rem 3rem;
+    max-width: 640px;
+    margin: 0 auto;
+}
+#order_form label {
+    padding-left: 3px;
+    font-weight: bold;
+}
+#order_form input, #order_form select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #2A2727;
+    background-color: #f8f4ed;
+    margin-bottom: 1em;
+}
+#order_form input[type=number] {
+    width: 40px;
+}
+.menu_course { 
+    border-top: 2px solid #10312B;
+    padding-bottom: 1.2em;
+}
+.menu_course:last-of-type {
+    border-bottom: 2px solid #2A2727;
+}
+#order_form fieldset {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding-top: .5em;
+    border: none;
+}
+#order_form legend {
+    color:#2A2727;
+    font-weight: bold;
+    margin-bottom: .5em;
+}
+
+/* the styles for the about page */
+#about_hero {
+    background-image: url("../images/open_concept_dining.jpeg");
+    background-color: #f8f4ed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 70vh;
+}
+.about_page {
+    display: block;
+    text-align: center;
+}
+.about_us {
+    padding: 48px;
+}
+.about_page h2, .about_page p {
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.about_page p:last-of-type {
+    margin-bottom: 3rem;
+}
+/* the styles for the contact page */
+.contact_page {
+    display: block;
+    text-align: center;
+}
+.contact_page h2, .contact_page p {
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.hours_location, .contact {
+    padding: 48px;
+}
+.reservation {
+    background-color: #10312B;
+    color: #f8f4ed;
+    padding: 48px;
+}
+.reservation a {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color:#f8f4ed;
+}
+.reservation a:hover, .reservation a:focus {color:#a27e51;}
+.reservation p:last-of-type {
+    margin-bottom: 2rem;
+}
+#contact_form {
+    text-align: left;
+    line-height: 1.5;
+    padding: 1rem 3rem 3rem 3rem;
+    max-width: 640px;
+    margin: 0 auto;
+}
+#contact_form fieldset {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding-top: .5em;
+    border: none;
+}
+#contact_form label {
+    padding-left: 3px;
+    font-weight: bold;
+    margin: -1px;
+}
+#contact_form input, #contact_form select, #contact_form textarea {
+    width: 100%;
+    padding: .75rem .75rem;
+    border: 1px solid #2A2727;
+    background-color: #f8f4ed;
+    margin-bottom: 1em;
+} 
+#pasta_love_image {
+    background-image: url("../images/love_and_pasta.jpeg");
+    background-color: #ffffff;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 70vh;
+}
+/* the styles for the footer */
+footer p {
+	background-color: #10312B;
+    color:#ffffff;
+    text-align: center;
+    padding: 2em 0;
+    margin-bottom: 0;
+}
+
+/* the media query for <960px smaller screens */
+@media only screen and (max-width: 960px) {
+    .welcome {grid-row: 1 / 2; grid-column: 1 / span 12;}
+    .about {grid-row: 2 / 3; grid-column: 1 / span 12;}
+    .about_image {grid-row: 3 / 4; grid-column: 1 / span 12;}
+    .menu_cta {grid-row: 4 / 5; grid-column: 1 / span 12;}
+    .menu_image {grid-row: 5 / 6; grid-column: 1 / span 12;}
+    .contact_cta {grid-row: 6 / 7; grid-column: 1 / span 12;}
+    .contact_image {grid-row: 7 / 8; grid-column: 1 / span 12;}
+
+    .about, .menu_cta, .contact_cta {
+        margin-bottom: 2rem;
+    }
+}
+
+/* the media query for <796px smaller screens */
+@media only screen and (max-width: 796px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    header img {
+        flex-basis: 250px;
+    }
+    header a {
+        margin: 0;
+    }
+    header nav {
+        flex-basis: 100%;
+    }
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+    }
+    nav ul li {
+        flex-basis: 100%;
+        text-align: center;
+        padding: 0 20px 20px 20px;
+    }
+}
+
+/* the media query for <420px smaller screens */
+@media only screen and (max-width: 420px) {
+    nav ul li {
+        padding: 0 10px 20px 10px;
+    }
+    #order_form input, #order_form select {
+        width: 90%;
+    }    
+    #contact_form {
+        padding: 0 1rem 0 0;
+    }
+    #pasta_love_image {
+        height: 30vh;
+    }
+   
+}
+
+/* the media query for <345px smaller screens */
+@media only screen and (max-width: 345px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    h2, h3 {
+        font-size: 1.5rem;
+    }
+    h4 {
+        font-size: 1.5rem;
+    }
+    h5 {
+        font-size: 1rem;
+    }
+    p, a, strong, em {
+        font-size: 1rem;
+        letter-spacing: 0.05rem;
+    }
+    .home_page h3 {
+        margin-top: 0;
+    }
+    .about, .menu_cta, .contact_cta {
+        margin-bottom: 1rem;
+    }
+    .about_us {
+        padding: 0 36px;
+    }
+    .hours_location, .reservation, .contact {
+        padding: 24px 36px;
+    }
+}
